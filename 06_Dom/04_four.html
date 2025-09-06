@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="firstName">
+        <li>Deepak</li>
+    </ul>
+    
+</body>
+<script>
+    function addName(name){
+        const li = document.createElement("li");
+        li.innerHTML = `${name}`;
+        document.querySelector(".firstName").appendChild(li);  
+    }
+    addName("pooja");
+
+    function addNewName(newName)
+    {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(newName))
+        document.querySelector(".firstName").appendChild(li);  
+
+    }
+
+    addNewName("aman")
+
+    // Edit
+
+    const secName = document.querySelector("li:nth-child(2)")
+    const newLi = document.createElement("li");
+    newLi.textContent = "reena";
+    secName.replaceWith(newLi);
+
+    // edit
+
+    const firstName = document.querySelector("li:first-child");
+    firstName.outerHTML = "<li>Singh</li>"
+
+    // remove
+    const lastName = document.querySelector("li:last-child");
+    lastName.remove();
+</script>
+</html>

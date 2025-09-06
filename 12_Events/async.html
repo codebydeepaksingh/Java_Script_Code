@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Deepak singh</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+        // setTimeout(function(){
+        //     console.log("my name is deepak");
+            
+        // }, 2000)
+
+        // setInterval(function(){
+        //     console.log("my name is deepak");
+        // },2000)
+
+        const sayName = function(){
+            console.log("Deepak");
+            
+        }
+
+        const timeOut = setTimeout(sayName,2000)
+        const timeInterval = setInterval(sayName,2000);
+
+        const stp = document.querySelector("#stop")
+
+        stp.addEventListener('dblclick', function(e){
+            clearTimeout(timeOut);
+            console.log("stopped");
+            
+        })
+
+</script>
+</html>

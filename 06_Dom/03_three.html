@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const createDiv = document.createElement("div");
+    console.log(createDiv);
+    createDiv.className = "deepak";
+    createDiv.id = "singh";
+    createDiv.style.padding = "20px";
+    createDiv.style.borderRadius = "20px";
+    
+    const heading = document.createElement("h1");
+    heading.style.color = "red";
+    heading.innerHTML = "my first heading";
+
+    const para = document.createElement("p");
+    para.style.color = "green";
+    para.innerHTML = "my first para";
+
+    createDiv.appendChild(heading);
+    createDiv.appendChild(para);
+
+    document.body.appendChild(createDiv);
+
+</script>
+</html>

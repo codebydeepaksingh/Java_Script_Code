@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>event.target Example</title>
+</head>
+<body>
+
+  <button id="btn">button</button>
+
+  <script>
+    const button = document.querySelector("#btn")
+    button.addEventListener('click', function(e){
+      console.log(e.clientX);
+      console.log(e.clientY);
+      console.log(e.screenX);
+      console.log(e.screenY); 
+      console.log(e.type);
+      console.log(e.timeStamp);
+      console.log(e.target);
+      console.log(e.toElement);
+      console.log(e.srcElement);
+    })
+
+
+
+
+  </script>
+</body>
+</html>

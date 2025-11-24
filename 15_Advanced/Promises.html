@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+
+// METHOD 1
+
+    const promiseOne = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+                console.log("Async task 1");
+                resolve();
+                
+        },1000)
+    });
+
+    promiseOne.then(()=>{
+        console.log("Promise 1");
+        
+    })
+
+    // METHOD 2
+
+    new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            console.log("async 2");
+            resolve();
+        },1000)
+    }).then(()=>{
+        console.log("promise 2");
+        
+    },)
+
+    // METHOD 3
+
+    const promiseThree = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve({username:"Deepak",age:30})
+        },1000)
+    })
+
+    promiseThree.then((user)=>{
+        console.log(user);
+        
+    })
+
+    // METHOD FOUR
+
+    const promiseFour = new Promise(function(resolve, reject){
+
+        setTimeout(function(){
+            let error =true;
+            if(!error){
+                resolve({username:"Deepak",password:"123456"})
+            } else {
+                reject("ERROR: Something went wrong")
+            }
+        },1000);
+    })
+
+    promiseFour
+    .then(function(user){
+        console.log(user);
+        return user.username
+        
+    })
+
+    .then(function(username){
+        console.log(username);
+        
+    })
+    
+    .catch(function(error){
+        console.log(error);
+        
+    }).finally(function(){
+        console.log("The promise is either resolved or rejected");
+        
+    })
+
+
+
+    // Promise five
+
+    const promiseFive = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            let error =true
+            if (!error){
+                resolve({username:"javascript",password:"123456"})
+            }
+            else{
+                reject("ERROR: Something went wrong")
+            }
+        },1000)
+    })
+
+    async function consumePromiseFive() {
+        
+        try {
+            const response = await promiseFive
+        console.log((response));
+        } catch (error) {
+            console.log(error);
+            
+        }
+        
+    }
+
+    consumePromiseFive()
+
+
+
+
+
+</script>
+
+</html>

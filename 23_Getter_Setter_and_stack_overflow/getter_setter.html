@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter Setter</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    class User {
+        constructor(username, email, password) {
+            this.username = username;
+            this.email = email;
+            this.password = password;
+        }
+
+        get email() {
+            return this._email.toUpperCase();
+        }
+
+        set email(newemail) {
+            this._email = newemail
+
+        }
+
+        get password(){
+            return `passowrd is ${this._password}asd123`
+        }
+
+        set password(newpass){
+            this._password = newpass
+        }
+    }
+
+    let u1 = new User("Deepak", "d@gmail.com", "18263")
+
+    console.log(u1.email);
+
+    console.log(u1.password);
+
+
+    // getter and setter with object
+
+    const player = {
+        playerName:"Rohit Sharma",
+        jNumber : 45,
+
+
+        get name(){
+            return `player name is ${this.playerName}`;
+        },
+
+        set name(newname){
+            if (newname.length > 0) {
+                this.playerName = newname;
+            }
+
+            else {
+                console.log("name cannot be empthy");
+                
+            }
+        }
+    }
+
+    console.log(player.name);
+
+    // getter and setter with class
+
+    class Driver {
+        constructor(name, id, rank){
+            this.name = name;
+            this.id = id;
+            this.rank = rank;
+        }
+
+        get name(){
+            return this._name.toUpperCase();
+        }
+
+        set name(value){
+         this._name = value;
+        }
+    }
+
+    const p = new Driver("Pradeep", 1100, 27);
+
+    console.log(p.name);
+    
+
+   
+    
+
+
+
+
+</script>
+
+</html>

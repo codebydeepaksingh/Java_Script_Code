@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation</title>
+</head>
+<body>
+
+    Encapsulation (bundling data + methods inside a class)
+
+    
+</body>
+<script>
+
+    class Human {
+        constructor(name,age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        introduction(){
+            console.log(`hi, my name is ${this.name} and my age is ${this.age}`);
+
+        }
+        
+    }
+
+    const human1 = new Human("Deepak",30);
+    human1.introduction();
+
+
+
+</script>
+</html>

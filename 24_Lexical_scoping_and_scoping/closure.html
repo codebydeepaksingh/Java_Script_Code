@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+
+    // const o = document.querySelector("#orange");
+    // const g = document.querySelector("#green");
+
+
+    // o.addEventListener("click",function(){
+    //     document.body.style.backgroundColor = "orange"
+    // })
+
+    //  g.addEventListener("click",function(){
+    //     document.body.style.backgroundColor = "green"
+    // })
+
+
+    const o = document.querySelector("#orange");
+    const g = document.querySelector("#green");
+
+
+    function clickHandler(color){
+
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    o.addEventListener('click',clickHandler("orange"));
+    g.addEventListener('click',clickHandler("green"));
+
+
+</script>
+</html>

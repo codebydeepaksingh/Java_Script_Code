@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+
+<body>
+
+
+</body>
+
+<script>
+
+    // Object literal
+    // const user = {
+    //     name: "Deepak",
+    //     age: 30,
+    //     marks: function () {
+    //         console.log(`got the user details`);
+    //         console.log(`username - ${this.name}`);
+    //         console.log(this);
+
+    //     }
+    // }
+
+    // console.log(user.marks());
+    // console.log(this);
+
+    //Constructor function 
+
+    // **new** creates a new object.
+    // constructor function calls beacause of new keyword 
+    // all the argument inject in the this keyword 
+    // you will get all the data 
+
+
+    function User(username, logInCount, isLoggedIn){
+        this.username = username;
+        this.logInCount = logInCount;
+        this.isLoggedIn = isLoggedIn;
+
+        return this;
+    };
+
+    const userOne = new User("Deepak", 12, true);
+    const userTwo = new User("Pooja", 12, false);
+
+    console.log(userOne);
+    console.log(userTwo.constructor);
+
+    
+
+</script>
+</html>

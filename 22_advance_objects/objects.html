@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const discripter = Object.getOwnPropertyDescriptor(Math, "PI")
+    // console.log(discripter);
+
+    const coffee = {
+        name: "black coffee",
+        price: 750,
+        isAvailable: true,
+
+        ordercofee: function () {
+            console.log("coffee not ready");
+
+        }
+    }
+
+    // console.log(Object.getOwnPropertyDescriptor(coffee, "name"));
+
+    Object.defineProperty(coffee, "name", {
+        // writable:false,
+        enumerable: false
+    })
+
+    console.log(Object.getOwnPropertyDescriptor(coffee, "name"));
+
+
+    // new 
+
+    const person = {
+        name: "Deepak",
+        age: 30
+    }
+
+    const discripter1 = Object.getOwnPropertyDescriptor(person, "name");
+
+    console.log(discripter1);
+
+    Object.defineProperty(person, "name", {
+        writable: false,
+        enumerable: false
+    })
+
+    console.log(Object.getOwnPropertyDescriptor(person,"name"));
+    
+
+
+
+</script>
+
+</html>
